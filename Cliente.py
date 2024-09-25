@@ -8,14 +8,14 @@ while True:
     # Enviar mensaje al servidor
     mensaje = input("Escriba un mensaje al servidor: ")
     cliente.send(mensaje.encode())
-    if mensaje == 'salir':
+    if mensaje == 'Salir':
         print("finalizando conexión con el servidor")
         break
 
     # Recibir mensaje del servidor
     mensaje_servidor = cliente.recv(1024).decode()
     print(f"El servidor respondió: {mensaje_servidor}")
-    if mensaje_servidor == 'salir':
+    if mensaje_servidor == 'Salir':
         print("El servidor finalizó la conexión")
         break
 
