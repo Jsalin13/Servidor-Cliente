@@ -15,7 +15,7 @@ print(f"Conexión desde {direccion}")
 while True:
     # Recibir mensaje del cliente
     mensaje = conexion.recv(1024).decode()
-    if mensaje == 'salir':
+    if mensaje == 'Salir':
         print("El cliente finalizó la conexión")
         break
     print(f"El cliente respondió: {mensaje}")
@@ -23,7 +23,7 @@ while True:
     # Enviar mensaje al cliente
     mensaje_servidor = input("Escriba un mensaje al cliente: ")
     conexion.send(mensaje_servidor.encode())
-    if mensaje_servidor == 'salir':
+    if mensaje_servidor == 'Salir':
         print("El servidor finalizó la conexión")
         break
 
